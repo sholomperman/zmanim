@@ -16,7 +16,7 @@ const main = async (zipCode) => {
   const url = `https://www.chabad.org/calendar/zmanim_cdo/aid/143790/locationid/${zipCode}/locationtype/2/tdate/${month}-${day}-${year}/jewish/Zmanim-Halachic-Times.htm`;
     const browser = await puppeteer.launch({
       args: ['--no-sandbox'],
-      headless: false
+      headless: 'new'
     });
     const page = await browser.newPage();
     // ? sometimes the page in headless mode opens in phone or other size and this will make sure it opens in desktop version
@@ -127,5 +127,7 @@ async function sendMessages(destination, message) {
   client.initialize();
 
 
-  const port = 8080 || process.env.PORT;
-  app.listen(port);
+  const port =  process.env.PORT || 8080;
+  app.listen(port, ()=>{
+    console.log('listening on port:', port);
+  });
