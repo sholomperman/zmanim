@@ -4,7 +4,8 @@ import puppeteer from 'puppeteer';
 import qrcode from 'qrcode-terminal';
 import pkg from 'whatsapp-web.js';
 const { Client, LocalAuth } = pkg;
-
+import dotenv from 'dotenv';
+dotenv.config()
 
 const now = new Date();
 const month = now.getMonth() + 1;
@@ -15,7 +16,16 @@ const year = now.getFullYear();
 const main = async (zipCode) => {
   const url = `https://www.chabad.org/calendar/zmanim_cdo/aid/143790/locationid/${zipCode}/locationtype/2/tdate/${month}-${day}-${year}/jewish/Zmanim-Halachic-Times.htm`;
     const browser = await puppeteer.launch({
-      args: ['--no-sandbox'],
+      args: [
+        "--disable-setuid-sandbox",
+        "--no-sandbox",
+        "--single-process",
+        "--no-zygote",
+      ],
+      executablePath:
+        process.env.NODE_ENV === "production"
+          ? process.env.PUPPETEER_EXECUTABLE_PATH
+          : puppeteer.executablePath(),  
       headless: 'new'
     });
     const page = await browser.newPage();
