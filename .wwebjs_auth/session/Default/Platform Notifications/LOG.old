@@ -1,3 +1,2 @@
-2023/12/12-21:12:25.232 a803 Reusing MANIFEST /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/Platform Notifications/MANIFEST-000001
-2023/12/12-21:12:25.232 a803 Recovering log #3
-2023/12/12-21:12:25.232 a803 Reusing old log /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/Platform Notifications/000003.log 
+2023/12/12-21:42:33.468 13d0b Creating DB /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/Platform Notifications since it was missing.
+2023/12/12-21:42:33.531 13d0b Reusing MANIFEST /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/Platform Notifications/MANIFEST-000001
