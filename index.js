@@ -126,7 +126,9 @@ async function sendMessages(destination, message) {
 }
   client.initialize();
 
-
+  app.get('/', (req, res) => {
+    res.send('zmanim what\'s app service!')
+  })
   const port =  process.env.PORT || 8080;
   app.listen(port, ()=>{
     console.log('listening on port:', port);
