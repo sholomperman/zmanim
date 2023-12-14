@@ -14,13 +14,15 @@ const year = now.getFullYear();
 const main = async (zipCode) => {
   const url = `https://www.chabad.org/calendar/zmanim_cdo/aid/143790/locationid/${zipCode}/locationtype/2/tdate/${month}-${day}-${year}/jewish/Zmanim-Halachic-Times.htm`;
     const browser = await puppeteer.launch({
-      args: [
-        "--disable-setuid-sandbox",
-        "--no-sandbox",
-        "--single-process",
-        "--no-zygote",
-      ],
-      headless: 'new'
+      // args: [
+      //   "--disable-setuid-sandbox",
+      //   "--no-sandbox",
+      //   "--single-process",
+      //   "--no-zygote",
+      // ],
+      // headless: 'new'
+      args: ['--no-sandbox'],
+      headless: true
     });
     const page = await browser.newPage();
     // ? sometimes the page in headless mode opens in phone or other size and this will make sure it opens in desktop version

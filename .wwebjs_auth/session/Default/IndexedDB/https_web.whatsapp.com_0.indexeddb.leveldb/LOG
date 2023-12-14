@@ -1,25 +1,25 @@
-2023/12/12-22:20:14.224 f903 Reusing MANIFEST /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/12/12-22:20:14.224 f903 Recovering log #98
-2023/12/12-22:20:14.233 f903 Reusing old log /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000098.log 
-2023/12/12-22:20:14.233 f903 Delete type=2 #97
-2023/12/12-22:20:24.893 1360b Level-0 table #103: started
-2023/12/12-22:20:24.936 1360b Level-0 table #103: 80787 bytes OK
-2023/12/12-22:20:24.974 1360b Delete type=0 #98
-2023/12/12-22:20:24.975 1360b Manual compaction at level-0 from '\x00(\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00)\x00\x00\x00' @ 0 : 0; will stop at '\x00)\x00\x00\x05' @ 116542 : 1
-2023/12/12-22:20:24.975 1360b Compacting 1@0 + 1@1 files
-2023/12/12-22:20:25.042 1360b Generated table #104@0: 59802 keys, 1275201 bytes
-2023/12/12-22:20:25.042 1360b Compacted 1@0 + 1@1 files => 1275201 bytes
-2023/12/12-22:20:25.081 1360b compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/12/12-22:20:25.081 1360b Delete type=2 #103
-2023/12/12-22:20:25.082 1360b Manual compaction at level-0 from '\x00)\x00\x00\x05' @ 116542 : 1 .. '\x00)\x00\x00\x00' @ 0 : 0; will stop at (end)
-2023/12/12-22:20:25.089 1360b Level-0 table #106: started
-2023/12/12-22:20:25.109 1360b Level-0 table #106: 467 bytes OK
-2023/12/12-22:20:25.146 1360b Delete type=2 #100
-2023/12/12-22:20:25.147 1360b Delete type=0 #102
-2023/12/12-22:20:25.147 1360b Manual compaction at level-0 from '\x00)\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00*\x00\x00\x00' @ 0 : 0; will stop at '\x00)\x00\x00\x05' @ 116575 : 0
-2023/12/12-22:20:25.147 1360b Compacting 1@0 + 1@1 files
-2023/12/12-22:20:25.210 1360b Generated table #107@0: 59800 keys, 1275176 bytes
-2023/12/12-22:20:25.210 1360b Compacted 1@0 + 1@1 files => 1275176 bytes
-2023/12/12-22:20:25.249 1360b compacted to: files[ 0 1 1 0 0 0 0 ]
-2023/12/12-22:20:25.249 1360b Delete type=2 #106
-2023/12/12-22:20:25.249 1360b Manual compaction at level-0 from '\x00)\x00\x00\x05' @ 116575 : 0 .. '\x00*\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/12/13-23:57:55.237 8203 Reusing MANIFEST /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/12/13-23:57:55.237 8203 Recovering log #105
+2023/12/13-23:57:55.251 8203 Reusing old log /Users/sholom/Desktop/Code/back-end/zmanim/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000105.log 
+2023/12/13-23:57:55.251 8203 Delete type=2 #104
+2023/12/13-23:58:05.898 11c03 Level-0 table #110: started
+2023/12/13-23:58:05.945 11c03 Level-0 table #110: 152996 bytes OK
+2023/12/13-23:58:05.985 11c03 Delete type=0 #105
+2023/12/13-23:58:05.986 11c03 Manual compaction at level-0 from '\x00*\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00+\x00\x00\x00' @ 0 : 0; will stop at '\x00+\x00\x00\x05' @ 123414 : 1
+2023/12/13-23:58:05.986 11c03 Compacting 1@0 + 1@1 files
+2023/12/13-23:58:06.055 11c03 Generated table #111@0: 63038 keys, 1337170 bytes
+2023/12/13-23:58:06.056 11c03 Compacted 1@0 + 1@1 files => 1337170 bytes
+2023/12/13-23:58:06.093 11c03 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/12/13-23:58:06.093 11c03 Delete type=2 #110
+2023/12/13-23:58:06.094 11c03 Manual compaction at level-0 from '\x00+\x00\x00\x05' @ 123414 : 1 .. '\x00+\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/12/13-23:58:06.102 8203 Level-0 table #113: started
+2023/12/13-23:58:06.121 8203 Level-0 table #113: 466 bytes OK
+2023/12/13-23:58:06.160 8203 Delete type=2 #107
+2023/12/13-23:58:06.160 8203 Delete type=0 #109
+2023/12/13-23:58:06.161 8203 Manual compaction at level-0 from '\x00+\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00,\x00\x00\x00' @ 0 : 0; will stop at '\x00+\x00\x00\x05' @ 123447 : 0
+2023/12/13-23:58:06.161 8203 Compacting 1@0 + 1@1 files
+2023/12/13-23:58:06.226 8203 Generated table #114@0: 63036 keys, 1337143 bytes
+2023/12/13-23:58:06.226 8203 Compacted 1@0 + 1@1 files => 1337143 bytes
+2023/12/13-23:58:06.264 8203 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/12/13-23:58:06.264 8203 Delete type=2 #113
+2023/12/13-23:58:06.265 8203 Manual compaction at level-0 from '\x00+\x00\x00\x05' @ 123447 : 0 .. '\x00,\x00\x00\x00' @ 0 : 0; will stop at (end)
