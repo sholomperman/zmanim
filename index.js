@@ -21,6 +21,7 @@ const main = async (zipCode) => {
       //   "--no-zygote",
       // ],
       // headless: 'new'
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
       args: ['--no-sandbox'],
       headless: true
     });
