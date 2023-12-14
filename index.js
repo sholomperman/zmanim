@@ -4,8 +4,6 @@ import puppeteer from 'puppeteer';
 import qrcode from 'qrcode-terminal';
 import pkg from 'whatsapp-web.js';
 const { Client, LocalAuth } = pkg;
-import dotenv from 'dotenv';
-dotenv.config()
 
 const now = new Date();
 const month = now.getMonth() + 1;
@@ -22,11 +20,7 @@ const main = async (zipCode) => {
         "--single-process",
         "--no-zygote",
       ],
-      executablePath:
-        process.env.NODE_ENV === "production"
-          ? process.env.PUPPETEER_EXECUTABLE_PATH
-          : puppeteer.executablePath(),  
-      // headless: 'new'
+      headless: 'new'
     });
     const page = await browser.newPage();
     // ? sometimes the page in headless mode opens in phone or other size and this will make sure it opens in desktop version
