@@ -8,6 +8,13 @@ Zmanim WhatsApp Bot is a tool built using WhatsApp.js and Puppeteer. It retrieve
 ```bash
 git clone hgit@github.com:sholomperman/zmanim.git
 cd zmanim
+```
+2. Install the dependencies:
+```bash
 npm install
+```
+3. start the app:
+remember to connect it to your whatsapp with the QR Code in the terminal
+```bash
 npm run start
 ```
