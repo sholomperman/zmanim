@@ -4,14 +4,16 @@ import puppeteer from 'puppeteer';
 import qrcode from 'qrcode-terminal';
 import pkg from 'whatsapp-web.js';
 const { Client, LocalAuth } = pkg;
-
-const now = new Date();
-const month = now.getMonth() + 1;
-const day = now.getDate();
-const year = now.getFullYear();
-
+const defaultEmail = 'sholomperman@gmail.com';
+const startMessage = `Please be sure that the ZIP Code is sent with no other digits or letters. If no response is recorded, server is down for maintenance. Please try again later, or contact the creator. email: ${defaultEmail}`;
 
 const main = async (zipCode) => {
+  const now = new Date();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const year = now.getFullYear();
+
+
   const url = `https://www.chabad.org/calendar/zmanim_cdo/aid/143790/locationid/${zipCode}/locationtype/2/tdate/${month}-${day}-${year}/jewish/Zmanim-Halachic-Times.htm`;
     const browser = await puppeteer.launch({
       //executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
@@ -84,7 +86,7 @@ const main = async (zipCode) => {
   });
 
 client.on('message', async message => {
-  if (!isNaN(message.body)) {
+  if (!isNaN(message.body) && message.body.length === 5) {
     const zipCode = message.body;
 
     try {
@@ -93,12 +95,14 @@ client.on('message', async message => {
       const formattedMessage = formatMessage(formattedResult);
 
       await sendMessages(message.from, formattedMessage);
-    } catch (error) {
-      console.error(error);
+    } catch (e) {
+      const currentNumber = "+13473789160";
+      await sendMessages(currentNumber.substring(1) + "@c.us", "there was an error \n " + e)
+      await sendMessages(message.from, startMessage);
     }
   }
   else {
-    sendMessages(message.from, 'please send the zip-code for the aria for the zmanim');
+    sendMessages(message.from, startMessage);
   }
 });
 
@@ -114,10 +118,12 @@ function formatMessage(formattedResult) {
   let message = '';
   formattedResult.forEach(obj => {
     obj.forEach(pair => {
-      message += `${pair.key}: ${pair.value}\n`;
+      message += `*${pair.key}*: ${pair.value}\n`;
     });
     message += '\n';
   });
+  message += "```Contact info\nemail: ```" + defaultEmail + "\n";
+
   return message;
 }
 
